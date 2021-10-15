@@ -6,4 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Loco</title>
 </head>
-<header>Benvingut <?php echo($nomCookies)?>!</header>
+<header>Benvingut <?php 
+if(isset($_COOKIE['nombre'])){
+    echo($_COOKIE['nombre'].' '.$_COOKIE['cognom']);
+}else{
+    echo('registra la teva cookie');
+}
+?>!</header>

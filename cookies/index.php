@@ -1,13 +1,13 @@
 
-<?php include('view/header.php')?>
 
 <body>
     <?php
-        if($nomCookies==null){
-            include('view/form_nom_cognoms.php');
-        }else{
-            include('menu.php');
+        if(isset($_COOKIE['cookies_name'])){
+            header('Location: view/menu.php');
+        }else{            
+            header('Location: view/form_nom_cognoms.php');
+
         }
     ?>
 </body>
-<?php include('view/footer.php')?>
+
